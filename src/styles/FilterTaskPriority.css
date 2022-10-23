@@ -1,0 +1,47 @@
+.filterTab {
+    border: 1px solid white;
+    width: 10rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+    border: 1px solid antiquewhite;
+    background-color: antiquewhite;
+    border-radius: 2px;
+}
+.priorityFilter {
+    float: left;
+    margin-left: 1rem;
+    width: 8rem;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: purple;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.filterOption {
+    font: 1.5rem;
+}
+@media only screen and (max-width: 736px) {
+    .filterTab {
+        width: 8rem;
+        height: 1.5rem;
+        margin-top: 5px;
+    }
+    .priorityFilter {
+        margin-left: 5px;
+        width: 7rem;
+        font-size: 7.5px;
+    }
+    .filterOption {
+        font: 1rem;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .filterTab {
+        width: 7rem;
+    }
+    .priorityFilter {
+        width: 6rem;
+    }
+}

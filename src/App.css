@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    text-decoration: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.appContainer {
+    max-width: 100%;
+    height: 100vh;
+    background-image: url(./images/mountain-lake.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
 }
-
-.App-link {
-  color: #61dafb;
+.appContainer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(165, 8, 165);
+    opacity: 0.7;
+    z-index: -1;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.appTitle {
+    font-size: 4rem;
+    color: azure;
+    letter-spacing: 1.5rem;
+    margin-left: 2rem;
+}
+.headInfo {
+    font-size: 1.55rem;
+    color: white;
+}
+.header {
+    display: flex;
+    width: 50rem;
+    align-items: center;
+    padding-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.taskboard {
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto 0 auto;
+    flex-shrink: initial;
+}
+.createTaskBtn {
+    width: 45rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: whitesmoke;
+    border-radius: 3px;
+    color: purple;
+    font-weight: bold;
+    background-color: antiquewhite;
+}
+.createTaskBtn:hover {
+    background-color: purple;
+    color: white;
+    box-shadow: 1px 1px 10px 2px white;
+}
+.completedTab, .inprogressTab {
+    width: 45rem;
+    height: 2rem;
+    border: 1px solid white;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: antiquewhite;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.tabDescription {
+    font-size: 1.2rem;
+    float: left;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: purple;
+}
+.tabBtn {
+    font-size: 1.2rem;
+    float: right;
+    margin-right: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: purple;
+    cursor: pointer;
+}
+.tabBtn:hover {
+    color: limegreen;
+}
+.divider {
+    display: flex;
+    justify-content: center;
+}
+.cardSection {
+    max-height: 50rem;
+    width: 50rem;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+.filterAndNavbar {
+    display: flex;
+    width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+nav {
+    width: 34.5rem;
+    text-align: right;
+    background-color: antiquewhite;
+    border-radius: 2px;
+    height: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+@media only screen and (max-width: 1024px) {
+    .cardSection {
+        max-height: 35rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .cardSection {
+        max-height: 70rem;
+        width: 38rem
+    }
+    .completedTab, .inprogressTab {
+        width: 35rem;
+    }
+}
+@media only screen and (max-width: 736px) {
+    .appTitle {
+        font-size: 2rem;
+        letter-spacing: 1rem;
+    }
+    .headInfo {
+        font-size: 1rem;
+    }
+    .header {
+        width: 30rem;
+        padding-top: 1rem;
+    }
+    .createTaskBtn {
+        width: 30rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+    .taskboard {
+        margin: 5px auto 0 auto;
+    }
+    .filterAndNavbar {
+        width: 30rem;
+    }
+    nav {
+        width: 21.5rem;
+        height: 1.5rem;
+        margin-top: 5px;
+        font-size: 7.4px;
+        font-weight: bold;
+    }
+    .completedTab, .inprogressTab {
+        width: 30rem;
+        height: 1.25rem;
+        border: none;
+        margin-top: 1rem;
+    }
+    .tabDescription {
+        font-size: 8px;
+        margin-left: 5px;
+    }
+    .tabBtn {
+        font-size: 8px;
+        margin-right: 5px;
+    }
+    .cardSection {
+        max-height: 15rem;
+        width: 33rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .createTaskBtn {
+        width: 29rem;
+    }
+    .completedTab, .inprogressTab {
+        width: 29rem;
+        height: 1.25rem;
+        border: none;
+        margin-top: 1rem;
+    }
+    .filterAndNavbar {
+        width: 29rem;
+    }
+    .divider {
+        flex-direction: column;
+    }
+    .taskboard {
+        width: 32rem;
+    }
 }

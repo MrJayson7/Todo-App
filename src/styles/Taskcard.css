@@ -1,0 +1,118 @@
+.taskcard {
+    background-color: whitesmoke;
+    margin: 3px auto 3px auto;
+    display: flex;
+    width: 45rem;
+    height: 7rem;
+    border: 2px limegreen solid;
+    border-radius: 8px;
+    color: brown;
+}
+.taskInfo {
+    width: 30rem;
+    margin-left: 2rem;
+}
+.cardCat, .cardPrio {
+    font-size: 1.2rem;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.cardName {
+    font-size: 1.5rem;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.taskAction {
+    display: flex;
+    align-items: center;
+    margin-left: 4rem;
+}
+.editBtn {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-image: url(../images/pen.png);
+    background-size: cover;
+    border: none;
+    
+}
+.deleteBtn {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 5px;
+    margin-right: 1.5rem;
+    background-image: url(../images/bin.png);
+    background-size: cover;
+    border: none;
+}
+.completeBtn {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-image: url(../images/check.png);
+    background-size: cover;
+    border: none;  
+}
+.editBtn:hover {
+    transform: scale(1.1);
+}
+.deleteBtn:hover {
+    transform: scale(1.1);
+}
+.completeBtn:hover {
+    transform: scale(1.1);
+}
+@media only screen and (max-width: 768px) {
+    .taskcard {
+        width: 35rem;
+    }
+}
+@media only screen and (max-width: 736px) {
+    .taskInfo {
+        width: 15rem;
+        margin-left: 1.5rem;
+    }
+    .cardCat, .cardPrio {
+        font-size: 8px;
+        margin-top: -2px;
+        margin-bottom: -2px;
+    }
+    .cardName {
+        font-size: 1rem;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+    .taskcard {
+        width: 30rem;
+        height: 4rem;
+    }
+    .editBtn {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 2.5px;
+        margin-right: 2.5px;
+    }
+    .deleteBtn {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 2.5px;
+        margin-right: 7.5px;
+    }
+    .completeBtn {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 2.5px;
+        margin-right: 2.5px;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .taskcard {
+        width: 29rem;
+    }
+    .taskInfo {
+        width: 17rem;
+        margin-left: 1.5rem;
+    }
+}
